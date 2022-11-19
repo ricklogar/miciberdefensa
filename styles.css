@@ -1,11 +1,142 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-html{
-    font-size: 62.5%;
-    font-family: "Poppins", sans-serif;
-    scroll-behavior: smooth;
+html {
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: rgb(37, 99, 235);
+  background: linear-gradient(180deg, rgba(37, 99, 235, 1) 0%, rgba(79, 70, 229, 1) 100%);
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+.header-nav {
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  column-gap: 16px;
+  background-color: white;
+}
+.header-nav__logo {
+  width: 64px;
+  height: 64px;
+}
+.header-nav__text {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.home-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  padding: 20px;
+}
+.Home-div__title {
+  margin-top: 60px;
+  font-size: 3.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+}
+.Home-div__text {
+  font-size: 1.8rem;
+  line-height: 36px;
+  text-align: center;
+  color: white;
+}
+#Home-div__Button,
+#Questions-div__button {
+  padding: 8px 32px;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  background-color: #33cfc8;
+}
+#Home-div__Button:hover,
+#Questions-div__button:hover {
+  cursor: pointer;
+}
+
+.Questions-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 16px;
+  padding: 20px;
+}
+.Questions-div__Q {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+.Questions-div__Q p {
+  color: white;
+  font-weight: 500;
+}
+.Questions-div__Q input {
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+}
+
+.Results-div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 20px;
+}
+.Results-div__text {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+.Results-div__passwords {
+  display: grid;
+  justify-items: center;
+  row-gap: 16px;
+  grid-template-columns: 1fr 1fr;
+}
+.Results-div__passwords span {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: white;
+}
+
+.AR-div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  padding: 20px;
+}
+.AR-div__title {
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+.AR-div__text {
+  font-size: 1.8rem;
+  line-height: 36px;
+  text-align: center;
+  color: white;
 }
