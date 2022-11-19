@@ -1,0 +1,33 @@
+.home-div {
+  padding: 20px 10%;
+}
+.Home-div__title {
+  font-size: 6.4rem;
+  line-height: 75px;
+}
+.Questions-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px 10%;
+  column-gap: 10%;
+  align-items: end;
+}
+.Results-div {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 60px 10%;
+  align-items: center;
+}
+.Results-div__text {
+  font-size: 3.6rem;
+}
+.Results-div__passwords {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.AR-div {
+  padding: 20px 10%;
+}
+.AR-div__title {
+  font-size: 6.4rem;
+  line-height: 75px;
+}
