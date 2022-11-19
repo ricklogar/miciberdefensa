@@ -1,0 +1,22 @@
+{
+  "name": "miciberdefensa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricklogar/miciberdefensa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricklogar/miciberdefensa/issues"
+  },
+  "homepage": "https://github.com/ricklogar/miciberdefensa#readme",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "crypto-js": "^4.1.1"
+  }
+}
