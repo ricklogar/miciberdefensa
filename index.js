@@ -12,21 +12,23 @@ endBtn.addEventListener('click', () => {
   arSection.classList.remove('hide-section');
   resultsSection.scrollIntoView();
 
-  const inputName = document.querySelector('#Input-Q1').value;
-  const inputDay = document.querySelector('#Input-Q2').value;
-  const inputYear = document.querySelector('#Input-Q3').value;
-  const inputNickname = document.querySelector('#Input-Q4').value;
-  const inputPet = document.querySelector('#Input-Q5').value;
-  const inputRelative = document.querySelector('#Input-Q6').value;
-  const inputCouple = document.querySelector('#Input-Q7').value;
-  const inputPlace = document.querySelector('#Input-Q8').value;
-  const inputAnimal = document.querySelector('#Input-Q9').value;
-  const inputFood = document.querySelector('#Input-Q10').value;
-  const inputSon = document.querySelector('#Input-Q11').value;
-  const inputCharacter = document.querySelector('#Input-Q12').value;
-  const inputTeam = document.querySelector('#Input-Q13').value;
-  const inputBirthPlace = document.querySelector('#Input-Q14').value;
-  const inputZodiac = document.querySelector('#Input-Q15').value;
+  const regex = /\s+/g;
+
+  const inputName = document.querySelector('#Input-Q1').value.replace(regex,'');
+  const inputDay = document.querySelector('#Input-Q2').value.replace(regex,'');
+  const inputYear = document.querySelector('#Input-Q3').value.replace(regex,'');
+  const inputNickname = document.querySelector('#Input-Q4').value.replace(regex,'');
+  const inputPet = document.querySelector('#Input-Q5').value.replace(regex,'');
+  const inputRelative = document.querySelector('#Input-Q6').value.replace(regex,'');
+  const inputCouple = document.querySelector('#Input-Q7').value.replace(regex,'');
+  const inputPlace = document.querySelector('#Input-Q8').value.replace(regex,'');
+  const inputAnimal = document.querySelector('#Input-Q9').value.replace(regex,'');
+  const inputFood = document.querySelector('#Input-Q10').value.replace(regex,'');
+  const inputSon = document.querySelector('#Input-Q11').value.replace(regex,'');
+  const inputCharacter = document.querySelector('#Input-Q12').value.replace(regex,'');
+  const inputTeam = document.querySelector('#Input-Q13').value.replace(regex,'');
+  const inputBirthPlace = document.querySelector('#Input-Q14').value.replace(regex,'');
+  const inputZodiac = document.querySelector('#Input-Q15').value.replace(regex,'');
   
   const password1 = inputName.concat(inputDay);
   const password2 = inputName.concat(inputYear);
