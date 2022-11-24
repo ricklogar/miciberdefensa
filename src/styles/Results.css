@@ -1,0 +1,22 @@
+.Results-div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 20px;
+}
+.Results-div__text {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+.Results-div__passwords {
+  display: grid;
+  justify-items: center;
+  row-gap: 16px;
+  grid-template-columns: 1fr 1fr;
+}
+.Results-div__passwords span {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: white;
+}

@@ -1,0 +1,19 @@
+.AR-div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  padding: 20px;
+}
+.AR-div__title {
+  font-size: 3rem;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+.AR-div__text {
+  font-size: 1.8rem;
+  line-height: 36px;
+  text-align: center;
+  color: white;
+}

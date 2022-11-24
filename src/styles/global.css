@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-bottom: 60px;
+  background: rgb(37, 99, 235);
+  background: linear-gradient(180deg, rgba(37, 99, 235, 1) 0%, rgba(79, 70, 229, 1) 100%);
+}
+
+p {
+  font-size: 1.8rem;
+}
+.hide-section {
+  display: none;
+}

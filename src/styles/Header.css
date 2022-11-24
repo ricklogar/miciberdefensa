@@ -1,0 +1,15 @@
+.header-nav {
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  column-gap: 16px;
+  background-color: white;
+}
+.header-nav__logo {
+  width: 64px;
+  height: 64px;
+}
+.header-nav__text {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
