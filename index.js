@@ -107,6 +107,11 @@ endBtn.addEventListener('click', () => {
   passwords[57] = inputZodiac.concat(inputYear);
   passwords[58] = inputZodiac.concat(inputYearArr[0]).concat(inputYearArr[1]);
   passwords[59] = inputZodiac.concat(inputYearArr[2]).concat(inputYearArr[3]);
+  passwords[60] = inputCouple.concat('y').concat(inputName);
+  passwords[61] = inputCouple.concat('y').concat(inputName).concat(inputYearArr[0]).concat(inputYearArr[1]);
+  passwords[62] = inputCouple.concat('y').concat(inputName).concat(inputYearArr[2]).concat(inputYearArr[3]);
+  passwords[63] = inputCouple.concat('y').concat(inputName).concat(inputYear);
+  passwords[63] = inputCouple.concat('y').concat(inputName).concat(inputDay);
   
   console.log(passwords);
   
