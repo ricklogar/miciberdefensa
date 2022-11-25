@@ -10,7 +10,7 @@ import '@styles/desktop.css';
 const Home = () => {
   useEffect(() => {
     const startBtn = document.querySelector('#Home-div__Button');
-    const endBtn = document.querySelector('#Questions-div__button');
+    const questionsSection = document.querySelector('#Questions');
     const resultsSection = document.querySelector('#Results');
     const arSection = document.querySelector('#Additional-Recommendations');
 
@@ -19,7 +19,8 @@ const Home = () => {
       document.querySelector('#Questions').scrollIntoView();
     });
 
-    endBtn.addEventListener('click', () => {
+    questionsSection.addEventListener('submit', (e) => {
+      e.preventDefault();
       resultsSection.classList.remove('hide-section');
       arSection.classList.remove('hide-section');
       resultsSection.scrollIntoView();

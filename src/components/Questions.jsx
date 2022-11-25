@@ -71,7 +71,7 @@ const Questions = () => {
           <p>¿Cuál es tu signo zodiacal?</p>
           <input type='text' name='' placeholder='Ingrese su respuesta' id='Input-Q15' required />
         </div>
-        <button id='Questions-div__button' type='button'>Finalizar</button>
+        <button id='Questions-div__button' type='submit'>Finalizar</button>
       </form>
     </section>
   );
