@@ -1,7 +1,20 @@
+const API_URL = 'https://api.pwnedpasswords.com/range/21BD1';
 const startBtn = document.querySelector('#Home-div__Button');
 const endBtn = document.querySelector('#Questions-div__button');
 const resultsSection = document.querySelector('#Results');
 const arSection = document.querySelector('#Additional-Recommendations');
+
+async function loadPwnedPasswords(ApiUrl) {
+  const res = await fetch(ApiUrl);
+  const data = await res.text();
+  console.log(data);
+  console.log('COMPARANDO...');
+  if (data.includes('00D4F6E8FA6EECAD2A3AA415EEC418D38EC')) {
+    console.log('CADENA ENCONTRADA :)');
+  } else {
+    console.log('NO SE ENCONTRÓ LA CADENA :(');
+  }
+}
 
 startBtn.addEventListener('click', () => {
   document.querySelector('#Questions').scrollIntoView();
