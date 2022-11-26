@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import axios from 'axios';
+import CryptoJS from 'crypto-js';
 import Header from '@components/Header';
 import Main from '@components/Main';
 import Questions from '@components/Questions';
@@ -8,15 +10,26 @@ import '@styles/global.css';
 import '@styles/desktop.css';
 
 const Home = () => {
+  const API_URL = 'https://api.pwnedpasswords.com/range';
+
+  const api = axios.create({ baseURL: API_URL });
+
+  async function getPwnedPasswords(hash) {
+    const { data } = await api(`/${hash}`);
+    return data;
+  }
+
   useEffect(() => {
     const startBtn = document.querySelector('#Home-div__Button');
     const questionsSection = document.querySelector('#Questions');
     const resultsSection = document.querySelector('#Results');
     const arSection = document.querySelector('#Additional-Recommendations');
+    const passwrdResults = document.querySelector('.Results-div__passwords');
 
     // Event listener to begin form
     startBtn.addEventListener('click', () => {
       document.querySelector('#Questions').scrollIntoView();
+      localStorage.setItem('true-count', 0);
     });
 
     questionsSection.addEventListener('submit', (e) => {
@@ -25,6 +38,11 @@ const Home = () => {
       arSection.classList.remove('hide-section');
       resultsSection.scrollIntoView();
 
+      let passwords = [];
+      let hashes = [];
+      let first5Hashes = [];
+      let restOfHash = [];
+      let trueCount = 0;
       const regex = /\s+/g;
 
       const inputName = document.querySelector('#Input-Q1').value.replace(regex, '');
@@ -57,8 +75,6 @@ const Home = () => {
       const inputBirthPlaceArr = inputBirthPlace.split('');
       const inputZodiac = document.querySelector('#Input-Q15').value.replace(regex, '');
       const inputZodiacArr = inputZodiac.split('');
-
-      let passwords = [];
 
       passwords[0] = inputName.concat(inputDay);
       passwords[1] = inputName.concat(inputYear);
@@ -200,14 +216,49 @@ const Home = () => {
       passwords[57] = inputZodiac.concat(inputYear);
       passwords[58] = inputZodiac.concat(inputYearArr[0]).concat(inputYearArr[1]);
       passwords[59] = inputZodiac.concat(inputYearArr[2]).concat(inputYearArr[3]);
+      passwords[60] = inputCouple.concat('y').concat(inputName);
+      passwords[61] = inputCouple
+        .concat('y')
+        .concat(inputName)
+        .concat(inputYearArr[0])
+        .concat(inputYearArr[1]);
+      passwords[62] = inputCouple
+        .concat('y')
+        .concat(inputName)
+        .concat(inputYearArr[2])
+        .concat(inputYearArr[3]);
+      passwords[63] = inputCouple.concat('y').concat(inputName).concat(inputYear);
+      passwords[64] = inputCouple.concat('y').concat(inputName).concat(inputDay);
 
-      console.log(passwords);
-
-      const passwrdResults = document.querySelector('.Results-div__passwords');
+      for (let i = 0; i < passwords.length; i++) {
+        hashes[i] = CryptoJS.SHA1(passwords[i]);
+        hashes[i] = hashes[i].toString(CryptoJS.enc.Hex).toUpperCase();
+      }
+      first5Hashes = hashes.map((hash) => hash.slice(0, 5));
+      restOfHash = hashes.map((hash) => hash.slice(5));
 
       passwords.map((password) => {
         passwrdResults.innerHTML += `<span>${password}</span>`;
       });
+
+      const htmlPasswords = document.querySelectorAll('.Results-div__passwords span');
+
+      for (let i = 0; i < passwords.length; i++) {
+        getPwnedPasswords(first5Hashes[i]).then((data) => {
+          if (data.includes(restOfHash[i])) {
+            localStorage.setItem('true-count', trueCount++);
+            htmlPasswords[i].classList.add('pwned-password')
+          }
+        });
+      }
+
+      setTimeout(() => {
+        trueCount = localStorage.getItem('true-count');
+        const average = (trueCount / passwords.length) * 100;
+        arSection.innerHTML = `El ${average.toFixed(0)}% de contraseñas han sido vulneradas`;
+        console.log(`El ${average.toFixed(0)}% de contraseñas han sido vulneradas`);
+        console.log('NUMBER OF TRUES', trueCount);
+      }, 1000);
     });
   }, []);
 

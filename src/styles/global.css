@@ -22,3 +22,6 @@ p {
 .hide-section {
   display: none;
 }
+.Results-div__passwords .pwned-password {
+  color: red;
+}
