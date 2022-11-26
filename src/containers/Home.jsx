@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import axios from 'axios';
 import CryptoJS from 'crypto-js';
 import Header from '@components/Header';
@@ -18,6 +18,8 @@ const Home = () => {
     const { data } = await api(`/${hash}`);
     return data;
   }
+
+  const isFirstRender = useRef(true);
 
   useEffect(() => {
     const startBtn = document.querySelector('#Home-div__Button');
@@ -44,6 +46,7 @@ const Home = () => {
       let restOfHash = [];
       let trueCount = 0;
       const regex = /\s+/g;
+      let htmlPasswords;
 
       const inputName = document.querySelector('#Input-Q1').value.replace(regex, '');
       const inputNameArr = inputName.split('');
@@ -237,28 +240,32 @@ const Home = () => {
       first5Hashes = hashes.map((hash) => hash.slice(0, 5));
       restOfHash = hashes.map((hash) => hash.slice(5));
 
-      passwords.map((password) => {
-        passwrdResults.innerHTML += `<span>${password}</span>`;
-      });
-
-      const htmlPasswords = document.querySelectorAll('.Results-div__passwords span');
-
-      for (let i = 0; i < passwords.length; i++) {
-        getPwnedPasswords(first5Hashes[i]).then((data) => {
-          if (data.includes(restOfHash[i])) {
-            localStorage.setItem('true-count', trueCount++);
-            htmlPasswords[i].classList.add('pwned-password')
-          }
+      if (isFirstRender.current) {
+        isFirstRender.current = false;
+      } else {
+        passwords.map((password) => {
+          passwrdResults.innerHTML += `<span>${password}</span>`;
         });
-      }
 
-      setTimeout(() => {
-        trueCount = localStorage.getItem('true-count');
-        const average = (trueCount / passwords.length) * 100;
-        arSection.innerHTML = `El ${average.toFixed(0)}% de contraseñas han sido vulneradas`;
-        console.log(`El ${average.toFixed(0)}% de contraseñas han sido vulneradas`);
-        console.log('NUMBER OF TRUES', trueCount);
-      }, 1000);
+        htmlPasswords = document.querySelectorAll('.Results-div__passwords span');
+
+        for (let i = 0; i < passwords.length; i++) {
+          getPwnedPasswords(first5Hashes[i]).then((data) => {
+            if (data.includes(restOfHash[i])) {
+              localStorage.setItem('true-count', trueCount++);
+              htmlPasswords[i].classList.add('pwned-password');
+            }
+          });
+        }
+        
+        setTimeout(() => {
+          trueCount = localStorage.getItem('true-count');
+          const average = (trueCount / passwords.length) * 100;
+          arSection.innerHTML = `El ${average.toFixed(0)}% de contraseñas han sido vulneradas`;
+          console.log(`El ${average.toFixed(0)}% de contraseñas han sido vulneradas`);
+          console.log('NUMBER OF TRUES', trueCount);
+        }, 1000);
+      }
     });
   }, []);
 
