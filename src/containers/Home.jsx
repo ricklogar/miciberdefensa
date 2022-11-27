@@ -12,8 +12,10 @@ import '@styles/desktop.css';
 const Home = () => {
   const API_URL = 'https://api.pwnedpasswords.com/range';
 
+  // Create API call
   const api = axios.create({ baseURL: API_URL });
 
+  // Get data from API
   async function getPwnedPasswords(hash) {
     const { data } = await api(`/${hash}`);
     return data;
@@ -34,6 +36,7 @@ const Home = () => {
       localStorage.setItem('true-count', 0);
     });
 
+    // Event listener when form is submited
     questionsSection.addEventListener('submit', (e) => {
       e.preventDefault();
       resultsSection.classList.remove('hide-section');
@@ -48,6 +51,8 @@ const Home = () => {
       const regex = /\s+/g;
       let htmlPasswords;
 
+      // Obtaining values form inputs
+      // Removing blank spaces
       const inputName = document.querySelector('#Input-Q1').value.replace(regex, '');
       const inputNameArr = inputName.split('');
       const inputDay = document.querySelector('#Input-Q2').value.replace(regex, '');
@@ -79,6 +84,7 @@ const Home = () => {
       const inputZodiac = document.querySelector('#Input-Q15').value.replace(regex, '');
       const inputZodiacArr = inputZodiac.split('');
 
+      // Generating passwords from the input value
       passwords[0] = inputName.concat(inputDay);
       passwords[1] = inputName.concat(inputYear);
       passwords[2] = inputNameArr[0]
@@ -233,22 +239,33 @@ const Home = () => {
       passwords[63] = inputCouple.concat('y').concat(inputName).concat(inputYear);
       passwords[64] = inputCouple.concat('y').concat(inputName).concat(inputDay);
 
+      // Hashing all the previous generated passwords with SHA-1
       for (let i = 0; i < passwords.length; i++) {
         hashes[i] = CryptoJS.SHA1(passwords[i]);
         hashes[i] = hashes[i].toString(CryptoJS.enc.Hex).toUpperCase();
       }
+      // Obtaining the first five characters from the hashed passwords
+      // for further use with the API
       first5Hashes = hashes.map((hash) => hash.slice(0, 5));
+      // Obtaining the rest of the hash from the hashed passwords
+      // to verify if it has been violated according to the API response
       restOfHash = hashes.map((hash) => hash.slice(5));
 
+      // Runs only once per render
+      // avoiding duplicated values
       if (isFirstRender.current) {
         isFirstRender.current = false;
       } else {
+        // Shows the generated passwords on the website
         passwords.map((password) => {
           passwrdResults.innerHTML += `<span>${password}</span>`;
         });
 
         htmlPasswords = document.querySelectorAll('.Results-div__passwords span');
 
+        // Obtaining the total of violated passwords according to the first
+        // five characters of the hashed passwords comparing the rest of the
+        // hash with the API response returning true if it has been violated
         for (let i = 0; i < passwords.length; i++) {
           getPwnedPasswords(first5Hashes[i]).then((data) => {
             if (data.includes(restOfHash[i])) {
@@ -257,7 +274,9 @@ const Home = () => {
             }
           });
         }
-        
+
+        // Wait for the local storage to store the
+        // total amount of violated passwords
         setTimeout(() => {
           trueCount = localStorage.getItem('true-count');
           const average = (trueCount / passwords.length) * 100;
