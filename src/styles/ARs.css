@@ -12,8 +12,74 @@
   color: white;
 }
 .AR-div__text {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-weight: 600;
   line-height: 36px;
   text-align: center;
+  padding-top: 30px;
+  color: white;
+}
+.AR-div__recommendations {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  row-gap: 20px;
+  padding-top: 30px;
+}
+.AR-div__R {
+  list-style: none;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 36px;
+  color: #e6e6e6;
+}
+.AR-div__R:first-child:before {
+  content: '🦾';
+  margin-left: -35px;
+  margin-right: 10px;
+}
+.AR-div__R:nth-child(2):before {
+  content: '🔨';
+  margin-left: -35px;
+  margin-right: 10px;
+}
+.AR-div__R:nth-child(3):before {
+  content: '🔐';
+  margin-left: -35px;
+  margin-right: 10px;
+}
+.AR-div__R:nth-child(4):before {
+  content: '🤯';
+  margin-left: -35px;
+  margin-right: 10px;
+}
+.AR-div__R:nth-child(5):before {
+  content: '🛂';
+  margin-left: -35px;
+  margin-right: 10px;
+}
+.AR-div__R:nth-child(6):before {
+  content: '🌐';
+  margin-left: -35px;
+  margin-right: 10px;
+}
+.AR-div__R:nth-child(7):before {
+  content: '🧑‍💻';
+  margin-left: -35px;
+  margin-right: 10px;
+}
+.AR-div__R:nth-child(8):before {
+  content: '🚫';
+  margin-left: -35px;
+  margin-right: 10px;
+}
+.AR-div__R:nth-child(9):before {
+  content: '⬆️';
+  margin-left: -35px;
+  margin-right: 10px;
+}
+.AR-div__R span {
+  font-size: 1.8rem;
+  font-weight: 600;
   color: white;
 }

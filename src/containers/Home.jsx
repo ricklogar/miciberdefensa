@@ -261,9 +261,7 @@ const Home = () => {
         setTimeout(() => {
           trueCount = localStorage.getItem('true-count');
           const average = (trueCount / passwords.length) * 100;
-          arSection.innerHTML = `El ${average.toFixed(0)}% de contraseñas han sido vulneradas`;
           console.log(`El ${average.toFixed(0)}% de contraseñas han sido vulneradas`);
-          console.log('NUMBER OF TRUES', trueCount);
         }, 1000);
       }
     });
