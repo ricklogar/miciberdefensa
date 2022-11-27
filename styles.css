@@ -145,8 +145,22 @@ p {
   color: white;
 }
 .AR-div__text {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-weight: 600;
   line-height: 36px;
   text-align: center;
+  color: white;
+  padding-top: 30px;
+}
+.AR-div__recommendations{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  row-gap: 20px;
+  padding-top: 30px;
+}
+.AR-div__R{
+  font-size: 1.8rem;
+  font-weight: 500;
   color: white;
 }
