@@ -6,6 +6,7 @@ import Main from '@components/Main';
 import Questions from '@components/Questions';
 import Results from '@components/Results';
 import ARs from '@components/ARs';
+import Footer from '@components/Footer';
 import '@styles/global.css';
 import '@styles/desktop.css';
 
@@ -293,6 +294,7 @@ const Home = () => {
       <Questions />
       <Results />
       <ARs />
+      <Footer />
     </>
   );
 };

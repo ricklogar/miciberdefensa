@@ -1,0 +1,18 @@
+.footer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+.footer__text {
+  color: white;
+}
+.footer__link {
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
