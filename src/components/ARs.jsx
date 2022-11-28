@@ -70,6 +70,7 @@ const ARs = () => {
             segura ya que el sistema de seguridad está en una mejora constante.
           </li>
         </ul>
+        <button id='AR-div__Button'>Comenzar de nuevo</button>
       </div>
     </section>
   );
