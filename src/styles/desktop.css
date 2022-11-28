@@ -1,6 +1,6 @@
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .home-div {
-    padding: 20px 10%;
+    padding: 0 10%;
   }
   .Home-div__title {
     font-size: 6.4rem;
@@ -9,12 +9,12 @@
   .Questions-div {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 20px 10%;
+    padding: 0 10%;
     column-gap: 10%;
     align-items: end;
   }
   .Results-div {
-    padding: 60px 10%;
+    padding: 0 10%;
     align-items: center;
   }
   .Results-div__text {
@@ -25,7 +25,7 @@
     column-gap: 32px;
   }
   .AR-div {
-    padding: 20px 10%;
+    padding: 0 10%;
   }
   .AR-div__title {
     font-size: 6.4rem;

@@ -18,9 +18,17 @@ body {
 p {
   font-size: 1.8rem;
 }
+.App {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
 .hide-section {
   display: none;
 }
 .Results-div__passwords .pwned-password {
-  color: red;
+  padding: 1px 8px;
+  border-radius: 20px;
+  background-color: red;
+  color: white;
 }
