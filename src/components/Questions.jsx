@@ -10,7 +10,7 @@ const Questions = () => {
           <input
             type='text'
             name='name'
-            placeholder='Ingrese su respuesta'
+            placeholder='Ingresa tu nombre'
             id='Input-Q1'
             required
             autoComplete='true'
@@ -21,7 +21,7 @@ const Questions = () => {
           <input
             type='number'
             name='birth-day'
-            placeholder='Ingrese su respuesta'
+            placeholder='Ingresa el día que naciste'
             id='Input-Q2'
             required
           />
@@ -31,7 +31,7 @@ const Questions = () => {
           <input
             type='number'
             name='birth-year'
-            placeholder='Ingrese su respuesta'
+            placeholder='Ingresa tu año de nacimiento'
             id='Input-Q3'
             required
           />
@@ -41,7 +41,7 @@ const Questions = () => {
           <input
             type='text'
             name='nickname'
-            placeholder='Ingrese su respuesta'
+            placeholder='Ingresa tu apodo'
             id='Input-Q4'
             required
           />
@@ -53,7 +53,7 @@ const Questions = () => {
           <input
             type='text'
             name='pet-name'
-            placeholder='Ingrese su respuesta'
+            placeholder='Ingresa el nombre de tu mascota'
             id='Input-Q5'
             required
           />
@@ -63,7 +63,7 @@ const Questions = () => {
           <input
             type='text'
             name='close-relative'
-            placeholder='Ingrese su respuesta'
+            placeholder='Ingresa el nombre de tu familiar'
             id='Input-Q6'
             required
           />
@@ -75,7 +75,7 @@ const Questions = () => {
           <input
             type='text'
             name='couple-name'
-            placeholder='Ingrese su respuesta'
+            placeholder='Ingresa el nombre de tu pareja'
             id='Input-Q7'
             required
           />
@@ -85,7 +85,7 @@ const Questions = () => {
           <input
             type='text'
             name='fav-place'
-            placeholder='Ingrese su respuesta'
+            placeholder='Ingresa el nombre de tu lugar favorito'
             id='Input-Q8'
             required
           />
@@ -95,7 +95,7 @@ const Questions = () => {
           <input
             type='text'
             name='fav-animal'
-            placeholder='Ingrese su respuesta'
+            placeholder='Ingresa el nombre tu animal favorito'
             id='Input-Q9'
             required
           />
@@ -105,7 +105,7 @@ const Questions = () => {
           <input
             type='text'
             name='fav-food'
-            placeholder='Ingrese su respuesta'
+            placeholder='Ingresa el nombre de tu comida favorita'
             id='Input-Q10'
             required
           />
@@ -117,7 +117,7 @@ const Questions = () => {
           <input
             type='text'
             name='child-name'
-            placeholder='Ingrese su respuesta'
+            placeholder='Ingresa el nombre de alguno de tus hijos'
             id='Input-Q11'
             required
           />
@@ -127,7 +127,7 @@ const Questions = () => {
           <input
             type='text'
             name='fav-sci-fi-character'
-            placeholder='Ingrese su respuesta'
+            placeholder='Ingresa el nombre de tu personaje de ficción favorito'
             id='Input-Q12'
             required
           />
@@ -137,7 +137,7 @@ const Questions = () => {
           <input
             type='text'
             name='fav-sports-team'
-            placeholder='Ingrese su respuesta'
+            placeholder='Ingresa el nombre de tu equipo favorito'
             id='Input-Q13'
             required
           />
@@ -147,7 +147,7 @@ const Questions = () => {
           <input
             type='text'
             name='hometown'
-            placeholder='Ingrese su respuesta'
+            placeholder='Ingresa el nombre de la ciudad en la que naciste'
             id='Input-Q14'
             required
           />
@@ -157,7 +157,7 @@ const Questions = () => {
           <input
             type='text'
             name='zodiac'
-            placeholder='Ingrese su respuesta'
+            placeholder='Ingresa tu signo zodiacal'
             id='Input-Q15'
             required
           />
