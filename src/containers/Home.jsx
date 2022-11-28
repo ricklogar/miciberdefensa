@@ -30,6 +30,10 @@ const Home = () => {
     const resultsSection = document.querySelector('#Results');
     const arSection = document.querySelector('#Additional-Recommendations');
     const passwrdResults = document.querySelector('.Results-div__passwords');
+    const formBtn = document.querySelector('#Questions-div__button');
+    const averageNum = document.querySelector('.Results__average');
+    const averageMsg = document.querySelector('.Results__text');
+    const restartBtn = document.querySelector('#AR-div__Button');
 
     // Event listener to begin form
     startBtn.addEventListener('click', () => {
@@ -40,6 +44,7 @@ const Home = () => {
     // Event listener when form is submited
     questionsSection.addEventListener('submit', (e) => {
       e.preventDefault();
+      formBtn.disabled = true;
       resultsSection.classList.remove('hide-section');
       arSection.classList.remove('hide-section');
       resultsSection.scrollIntoView();
@@ -281,9 +286,14 @@ const Home = () => {
         setTimeout(() => {
           trueCount = localStorage.getItem('true-count');
           const average = (trueCount / passwords.length) * 100;
-          console.log(`El ${average.toFixed(0)}% de contraseñas han sido vulneradas`);
+          averageNum.innerHTML = `${average.toFixed(0)}%`;
+          averageMsg.innerHTML = 'Contraseñas vulneradas';
         }, 1000);
       }
+    });
+
+    restartBtn.addEventListener('click', () => {
+      location.reload();
     });
   }, []);
 

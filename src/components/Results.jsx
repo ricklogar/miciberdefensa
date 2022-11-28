@@ -9,6 +9,10 @@ const Results = () => {
           Las posibles contraseñas generadas a partir de las respuestas obtenidas son:
         </p>
         <div className='Results-div__passwords'></div>
+        <div className='Results__percentage'>
+          <p className='Results__average'></p>
+          <p className='Results__text'></p>
+        </div>
       </div>
     </section>
   );
