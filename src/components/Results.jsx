@@ -1,4 +1,5 @@
 import React from 'react';
+import '@styles/loader.css';
 import '@styles/Results.css';
 
 const Results = () => {
@@ -10,7 +11,20 @@ const Results = () => {
         </p>
         <div className='Results-div__passwords'></div>
         <div className='Results__percentage'>
-          <p className='Results__average'></p>
+          <div className='Results__average'>
+            <div className='spinner'>
+              <svg viewBox='25 25 50 50' className='circular'>
+                <circle
+                  strokeMiterlimit='10'
+                  strokeWidth='3'
+                  fill='none'
+                  r='20'
+                  cy='50'
+                  cx='50'
+                  className='path'></circle>
+              </svg>
+            </div>
+          </div>
           <p className='Results__text'></p>
         </div>
       </div>

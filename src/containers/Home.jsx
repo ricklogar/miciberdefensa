@@ -288,7 +288,7 @@ const Home = () => {
           const average = (trueCount / passwords.length) * 100;
           averageNum.innerHTML = `${average.toFixed(0)}%`;
           averageMsg.innerHTML = 'Contraseñas vulneradas';
-        }, 1000);
+        }, 1500);
       }
     });
 
