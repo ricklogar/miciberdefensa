@@ -123,16 +123,22 @@ const Home = () => {
       passwords[11] = inputPet.concat(inputYear);
       passwords[12] = inputPet.concat(inputYearArr[0]).concat(inputYearArr[1]);
       passwords[13] = inputPet.concat(inputYearArr[2]).concat(inputYearArr[3]);
-      passwords[14] = inputPetArr[0]
-        .concat(inputPetArr[1])
-        .concat(inputPetArr[2])
-        .concat(inputPetArr[3])
-        .concat(inputDay);
-      passwords[15] = inputPetArr[0]
-        .concat(inputPetArr[1])
-        .concat(inputPetArr[2])
-        .concat(inputPetArr[3])
-        .concat(inputYear);
+      passwords[14] =
+        inputPetArr !== undefined
+          ? undefined
+          : inputPetArr[0]
+              .concat(inputPetArr[1])
+              .concat(inputPetArr[2])
+              .concat(inputPetArr[3])
+              .concat(inputDay);
+      passwords[15] =
+        inputPetArr !== undefined
+          ? undefined
+          : inputPetArr[0]
+              .concat(inputPetArr[1])
+              .concat(inputPetArr[2])
+              .concat(inputPetArr[3])
+              .concat(inputYear);
       passwords[16] = inputRelative.concat(inputDay);
       passwords[17] = inputRelative.concat(inputYear);
       passwords[18] = inputRelativeArr[0]
@@ -157,30 +163,42 @@ const Home = () => {
         .concat(inputRelativeArr[3])
         .concat(inputYearArr[2])
         .concat(inputYearArr[3]);
-      passwords[22] = inputCouple.concat(inputDay);
-      passwords[23] = inputCouple.concat(inputYear);
-      passwords[24] = inputCoupleArr[0]
-        .concat(inputCoupleArr[1])
-        .concat(inputCoupleArr[2])
-        .concat(inputCoupleArr[3])
-        .concat(inputDay);
-      passwords[25] = inputCoupleArr[0]
-        .concat(inputCoupleArr[1])
-        .concat(inputCoupleArr[2])
-        .concat(inputCoupleArr[3])
-        .concat(inputYear);
-      passwords[26] = inputCoupleArr[0]
-        .concat(inputCoupleArr[1])
-        .concat(inputCoupleArr[2])
-        .concat(inputCoupleArr[3])
-        .concat(inputYearArr[0])
-        .concat(inputYearArr[1]);
-      passwords[27] = inputCoupleArr[0]
-        .concat(inputCoupleArr[1])
-        .concat(inputCoupleArr[2])
-        .concat(inputCoupleArr[3])
-        .concat(inputYearArr[2])
-        .concat(inputYearArr[3]);
+      passwords[22] = inputCouple !== undefined ? undefined : inputCouple.concat(inputDay);
+      passwords[23] = inputCouple !== undefined ? undefined : inputCouple.concat(inputYear);
+      passwords[24] =
+        inputCoupleArr !== undefined
+          ? undefined
+          : inputCoupleArr[0]
+              .concat(inputCoupleArr[1])
+              .concat(inputCoupleArr[2])
+              .concat(inputCoupleArr[3])
+              .concat(inputDay);
+      passwords[25] =
+        inputCoupleArr !== undefined
+          ? undefined
+          : inputCoupleArr[0]
+              .concat(inputCoupleArr[1])
+              .concat(inputCoupleArr[2])
+              .concat(inputCoupleArr[3])
+              .concat(inputYear);
+      passwords[26] =
+        inputCoupleArr !== undefined
+          ? undefined
+          : inputCoupleArr[0]
+              .concat(inputCoupleArr[1])
+              .concat(inputCoupleArr[2])
+              .concat(inputCoupleArr[3])
+              .concat(inputYearArr[0])
+              .concat(inputYearArr[1]);
+      passwords[27] =
+        inputCoupleArr !== undefined
+          ? undefined
+          : inputCoupleArr[0]
+              .concat(inputCoupleArr[1])
+              .concat(inputCoupleArr[2])
+              .concat(inputCoupleArr[3])
+              .concat(inputYearArr[2])
+              .concat(inputYearArr[3]);
       passwords[28] = inputPlace.concat(inputDay);
       passwords[29] = inputPlace.concat(inputYear);
       passwords[30] = inputAnimal.concat(inputDay);
@@ -191,30 +209,42 @@ const Home = () => {
       passwords[35] = inputFood.concat(inputYear);
       passwords[36] = inputFood.concat(inputYearArr[0]).concat(inputYearArr[1]);
       passwords[37] = inputFood.concat(inputYearArr[2]).concat(inputYearArr[3]);
-      passwords[38] = inputSon.concat(inputDay);
-      passwords[39] = inputSon.concat(inputYear);
-      passwords[40] = inputSonArr[0]
-        .concat(inputSonArr[1])
-        .concat(inputSonArr[2])
-        .concat(inputSonArr[3])
-        .concat(inputDay);
-      passwords[41] = inputSonArr[0]
-        .concat(inputSonArr[1])
-        .concat(inputSonArr[2])
-        .concat(inputSonArr[3])
-        .concat(inputYear);
-      passwords[42] = inputSonArr[0]
-        .concat(inputSonArr[1])
-        .concat(inputSonArr[2])
-        .concat(inputSonArr[3])
-        .concat(inputYearArr[0])
-        .concat(inputYearArr[1]);
-      passwords[43] = inputSonArr[0]
-        .concat(inputSonArr[1])
-        .concat(inputSonArr[2])
-        .concat(inputSonArr[3])
-        .concat(inputYearArr[2])
-        .concat(inputYearArr[3]);
+      passwords[38] = inputSon !== undefined ? undefined : inputSon.concat(inputDay);
+      passwords[39] = inputSon !== undefined ? undefined : inputSon.concat(inputYear);
+      passwords[40] =
+        inputSonArr !== undefined
+          ? undefined
+          : inputSonArr[0]
+              .concat(inputSonArr[1])
+              .concat(inputSonArr[2])
+              .concat(inputSonArr[3])
+              .concat(inputDay);
+      passwords[41] =
+        inputSonArr !== undefined
+          ? undefined
+          : inputSonArr[0]
+              .concat(inputSonArr[1])
+              .concat(inputSonArr[2])
+              .concat(inputSonArr[3])
+              .concat(inputYear);
+      passwords[42] =
+        inputSonArr !== undefined
+          ? undefined
+          : inputSonArr[0]
+              .concat(inputSonArr[1])
+              .concat(inputSonArr[2])
+              .concat(inputSonArr[3])
+              .concat(inputYearArr[0])
+              .concat(inputYearArr[1]);
+      passwords[43] =
+        inputSonArr !== undefined
+          ? undefined
+          : inputSonArr[0]
+              .concat(inputSonArr[1])
+              .concat(inputSonArr[2])
+              .concat(inputSonArr[3])
+              .concat(inputYearArr[2])
+              .concat(inputYearArr[3]);
       passwords[44] = inputCharacter.concat(inputDay);
       passwords[45] = inputCharacter.concat(inputYear);
       passwords[46] = inputCharacter.concat(inputYearArr[0]).concat(inputYearArr[1]);
@@ -231,19 +261,32 @@ const Home = () => {
       passwords[57] = inputZodiac.concat(inputYear);
       passwords[58] = inputZodiac.concat(inputYearArr[0]).concat(inputYearArr[1]);
       passwords[59] = inputZodiac.concat(inputYearArr[2]).concat(inputYearArr[3]);
-      passwords[60] = inputCouple.concat('y').concat(inputName);
-      passwords[61] = inputCouple
-        .concat('y')
-        .concat(inputName)
-        .concat(inputYearArr[0])
-        .concat(inputYearArr[1]);
-      passwords[62] = inputCouple
-        .concat('y')
-        .concat(inputName)
-        .concat(inputYearArr[2])
-        .concat(inputYearArr[3]);
-      passwords[63] = inputCouple.concat('y').concat(inputName).concat(inputYear);
-      passwords[64] = inputCouple.concat('y').concat(inputName).concat(inputDay);
+      passwords[60] =
+        inputCouple !== undefined ? undefined : inputCouple.concat('y').concat(inputName);
+      passwords[61] =
+        inputCouple !== undefined
+          ? undefined
+          : inputCouple
+              .concat('y')
+              .concat(inputName)
+              .concat(inputYearArr[0])
+              .concat(inputYearArr[1]);
+      passwords[62] =
+        inputCouple !== undefined
+          ? undefined
+          : inputCouple
+              .concat('y')
+              .concat(inputName)
+              .concat(inputYearArr[2])
+              .concat(inputYearArr[3]);
+      passwords[63] =
+        inputCouple !== undefined
+          ? undefined
+          : inputCouple.concat('y').concat(inputName).concat(inputYear);
+      passwords[64] =
+        inputCouple !== undefined
+          ? undefined
+          : inputCouple.concat('y').concat(inputName).concat(inputDay);
 
       // Hashing all the previous generated passwords with SHA-1
       for (let i = 0; i < passwords.length; i++) {
@@ -264,7 +307,9 @@ const Home = () => {
       } else {
         // Shows the generated passwords on the website
         passwords.map((password) => {
-          passwrdResults.innerHTML += `<span>${password}</span>`;
+          if (password !== undefined) {
+            passwrdResults.innerHTML += `<span>${password}</span>`;
+          }
         });
 
         htmlPasswords = document.querySelectorAll('.Results-div__passwords span');

@@ -55,7 +55,6 @@ const Questions = () => {
             name='pet-name'
             placeholder='Ingresa el nombre de tu mascota'
             id='Input-Q5'
-            required
           />
         </div>
         <div className='Questions-div__Q'>
@@ -77,7 +76,6 @@ const Questions = () => {
             name='couple-name'
             placeholder='Ingresa el nombre de tu pareja'
             id='Input-Q7'
-            required
           />
         </div>
         <div className='Questions-div__Q'>
@@ -119,7 +117,6 @@ const Questions = () => {
             name='child-name'
             placeholder='Ingresa el nombre de alguno de tus hijos'
             id='Input-Q11'
-            required
           />
         </div>
         <div className='Questions-div__Q'>
